@@ -1,0 +1,155 @@
+.container{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.034), 0 6px 20px 0 rgba(0, 0, 0, 0.007);
+    .card{
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+    .buttonMenu{
+        visibility: hidden;
+    }
+    a{
+        list-style: none;
+        color: unset;
+        text-decoration: unset;
+        color: #0a2540;
+    }
+    .logo{
+        visibility: hidden;
+    }
+    >button{
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: white;
+        width: 75%;
+        .card{
+            justify-content: center;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            color: var(--textColor);
+            a{
+                display: block;
+                padding: 10px;
+                color: white;
+                span{
+                    width: 75px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .2rem;
+                }
+            }
+            
+            .logIn{
+                display: flex;
+                justify-content: center !important;
+                width: 100px !important;
+                padding: .4rem;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: 0s;
+                background-color: var(--textColor);
+                &:hover{
+                    background: var(--textColor);
+                }
+            }
+        }
+        .card:nth-child(2){
+            justify-content: flex-end;
+        }
+    }
+    @media screen and (max-width: 900px)  {
+        position: relative;
+        box-sizing: border-box;
+        padding: 0px 20px 0px 20px;
+        -webkit-user-select: none;
+        .card:nth-child(1){
+            .buttonMenu{
+                visibility: visible;
+            }
+            width: 100% !important;
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            span{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                >svg{
+                    cursor: pointer;
+                    font-size: 25px;
+                    fill: #4c6696 !important;
+                }
+            }
+        }
+        .menu{
+            right: 0px;
+            margin: 30px;
+            position: absolute;
+            height: 80vh !important;
+            z-index: 999;
+            width: 75% !important;
+            background-color: white;
+            color: black !important;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            transition: 1s;
+            overflow-y: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.034), 0 6px 20px 0 rgba(0, 0, 0, 0.007);
+            @include scroll;
+            .logo{
+                visibility: visible;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                padding: 20px;
+                color: #0a2540 !important;
+                border-radius: 20px;
+                align-items: center;
+                span{
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    font-weight: bolder;
+                    justify-content: center;
+                    align-items: center;
+                    color: #00a5cf;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #2bc2e723;
+                    }
+                }
+            }
+            .card{
+                width: 100%;
+                color: black !important;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start !important;
+                gap: 0px !important;
+                >span{
+                    width: 100% !important;
+                    padding: 20px;
+                    display: flex;
+                    justify-content: start !important;
+                    font-size: 18px !important;
+                    font-weight: 500 !important;
+                    cursor: pointer;
+                    &:hover{
+                        background: #00a6cf17;
+                    }
+                }
+            }
+        }
+    }
+}
